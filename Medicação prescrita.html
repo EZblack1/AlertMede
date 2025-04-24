@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medicações Prescritas</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('/ChatGPT\ Image\ 10_04_2025\,\ 20_40_37.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    
+    .login-container {
+      min-height: 100vh;
+      backdrop-filter: brightness(0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    
+    .login-wrapper {
+      width: 100%;
+      max-width: 50rem;
+    }
+    
+    .login-card {
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 1rem;
+      border: 1px solid #ef4444;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+      color: white;
+    }
+    
+    .login-card-content {
+      padding: 2rem;
+    }
+    
+    .login-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .login-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ef4444;
+      position: relative;
+    }
+    
+    .login-title::after {
+      content: '💊'; 
+      position: absolute;
+      top: -10px;
+      right: -25px;
+      font-size: 1.2rem;
+    }
+    
+    .login-subtitle {
+      font-size: 0.875rem;
+      color: #f87171;
+    }
+    
+    .medication-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .medication-card {
+      background-color: rgba(31, 31, 31, 0.7);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border-left: 4px solid #ef4444;
+    }
+    
+    .medication-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .medication-name {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #fca5a5;
+    }
+    
+    .medication-dosage {
+      background-color: #ef4444;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+    }
+    
+    .medication-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .detail-label {
+      font-size: 0.75rem;
+      color: #f87171;
+      margin-bottom: 0.25rem;
+    }
+    
+    .detail-value {
+      font-size: 0.9rem;
+      color: white;
+    }
+    
+    .medication-instructions {
+      background-color: rgba(239, 68, 68, 0.1);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border-left: 3px solid #ef4444;
+      margin-top: 1rem;
+    }
+    
+    .instructions-title {
+      font-weight: bold;
+      color: #fca5a5;
+      margin-bottom: 0.5rem;
+    }
+    
+    .instructions-text {
+      font-size: 0.9rem;
+      color: #e5e5e5;
+    }
+    
+    .action-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+    
+    .print-button {
+      background-color: #dc2626;
+      color: white;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .print-button:hover {
+      background-color: #b91c1c;
+    }
+    
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+      color: #ff4c4c;
+      background-color: transparent;
+      border: 1px solid #ff4c4c;
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .back-button:hover {
+      background-color: #ff4c4c;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(255, 76, 76, 0.2);
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: #f87171;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-wrapper">
+      <div class="login-card">
+        <div class="login-card-content">
+          <div class="login-header">
+            <h1 class="login-title">Medicações Prescritas</h1>
+            <p class="login-subtitle">Sua prescrição médica após a consulta</p>
+          </div>
+          
+          <div class="medication-list">
+            
+            <div class="medication-card">
+              <div class="medication-header">
+                <span class="medication-name">Paracetamol</span>
+                <span class="medication-dosage">500mg</span>
+              </div>
+              
+              <div class="medication-details">
+                <div class="detail-item">
+                  <span class="detail-label">Frequência</span>
+                  <span class="detail-value">8 em 8 horas</span>
+                </div>
+                
+                <div class="detail-item">
+                  <span class="detail-label">Duração</span>
+                  <span class="detail-value">5 dias</span>
+                </div>
+                
+                <div class="detail-item">
+                  <span class="detail-label">Via</span>
+                  <span class="detail-value">Oral</span>
+                </div>
+                
+                <div class="detail-item">
+                  <span class="detail-label">Quantidade</span>
+                  <span class="detail-value">15 comprimidos</span>
+                </div>
+              </div>
+              
+              <div class="medication-instructions">
+                <div class="instructions-title">Instruções:</div>
+                <p class="instructions-text">Tomar após as refeições com um copo de água. Não ultrapassar 4g por dia. Em caso de dor persistente ou febre alta, procurar o médico.</p>
+              </div>
+            </div>
+            
+            <!-- Segundo exemplo de card de medicação -->
+            <div class="medication-card">
+              <div class="medication-header">
+                <span class="medication-name">Ibuprofeno</span>
+                <span class="medication-dosage">400mg</span>
+              </div>
+              
+              <div class="medication-details">
+                <div class="detail-item">
+                  <span class="detail-label">Frequência</span>
+                  <span class="detail-value">12 em 12 horas</span>
+                </div>
+                
+                <div class="detail-item">
+                  <span class="detail-label">Duração</span>
+                  <span class="detail-value">3 dias</span>
+                </div>
+                
+                <div class="detail-item">
+                  <span class="detail-label">Via</span>
+                  <span class="detail-value">Oral</span>
+                </div>
+                
+                <div class="detail-item">
+                  <span class="detail-label">Quantidade</span>
+                  <span class="detail-value">6 comprimidos</span>
+                </div>
+              </div>
+              
+              <div class="medication-instructions">
+                <div class="instructions-title">Instruções:</div>
+                <p class="instructions-text">Tomar durante as refeições para evitar irritação gástrica. Suspender se aparecerem sinais de alergia (coceira, inchaço). Não usar em caso de suspeita de dengue.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="action-buttons">
+            <button class="back-button">
+              <span class="icon">←</span> Voltar
+            </button>
+            <button class="print-button">
+              <span class="icon">🖨️</span> Imprimir Receita
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
