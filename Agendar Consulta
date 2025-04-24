@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendar Consulta</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('/ChatGPT\ Image\ 10_04_2025\,\ 20_40_37.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    
+    .login-container {
+      min-height: 100vh;
+      backdrop-filter: brightness(0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    
+    .login-wrapper {
+      width: 100%;
+      max-width: 40rem;
+    }
+    
+    .login-card {
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 1rem;
+      border: 1px solid #ef4444;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+      color: white;
+    }
+    
+    .login-card-content {
+      padding: 2rem;
+    }
+    
+    .login-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .login-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ef4444;
+      position: relative;
+    }
+    
+    .login-title::after {
+      content: '📅';
+      position: absolute;
+      top: -10px;
+      right: -25px;
+      font-size: 1.2rem;
+    }
+    
+    .login-subtitle {
+      font-size: 0.875rem;
+      color: #f87171;
+    }
+    
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .login-label {
+      color: #fca5a5;
+      font-weight: 500;
+    }
+    
+    .login-input, .login-select {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: #1f1f1f;
+      color: white;
+      border: 1px solid #f87171;
+      border-radius: 0.5rem;
+    }
+    
+    .login-input::placeholder {
+      color: #e5e5e5;
+    }
+    
+    .login-input:focus, .login-select:focus {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 1px #ef4444;
+      outline: none;
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    .login-button {
+      background-color: #dc2626;
+      color: white;
+      font-weight: bold;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+    
+    .login-button:hover {
+      background-color: #b91c1c;
+    }
+    
+    .login-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    
+    .minimal-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.875rem;
+      color: #ff4c4c;
+      background-color: transparent;
+      border: 1px solid #ff4c4c;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .minimal-button:hover {
+      background-color: #ff4c4c;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(255, 76, 76, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-wrapper">
+      <div class="login-card">
+        <div class="login-card-content">
+          <div class="login-header">
+            <h1 class="login-title">Agendar Consulta</h1>
+            <p class="login-subtitle">Preencha os dados para marcar sua consulta</p>
+          </div>
+          <form class="login-form">
+            <div class="form-row">
+              <div>
+                <label for="specialty" class="login-label">Especialidade</label>
+                <select id="specialty" class="login-select">
+                  <option value="">Selecione uma especialidade</option>
+                  <option value="cardiologia">Cardiologia</option>
+                  <option value="dermatologia">Dermatologia</option>
+                  <option value="clinico">Clínico Geral</option>
+                  <option value="pediatria">Pediatria</option>
+                </select>
+              </div>
+              <div>
+                <label for="doctor" class="login-label">Médico</label>
+                <select id="doctor" class="login-select">
+                  <option value="">Selecione um médico</option>
+                  <option value="dr_silva">Dr. Silva (Cardiologista)</option>
+                  <option value="dra_oliveira">Dra. Oliveira (Dermatologista)</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div>
+                <label for="date" class="login-label">Data</label>
+                <input
+                  type="date"
+                  id="date"
+                  class="login-input"
+                />
+              </div>
+              <div>
+                <label for="time" class="login-label">Horário</label>
+                <select id="time" class="login-select">
+                  <option value="">Selecione um horário</option>
+                  <option value="08:00">08:00</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                </select>
+              </div>
+            </div>
+            
+            <div>
+              <label for="reason" class="login-label">Motivo da Consulta</label>
+              <textarea
+                id="reason"
+                placeholder="Descreva o motivo da consulta"
+                class="login-input"
+                rows="3"
+              ></textarea>
+            </div>
+            
+            <button type="submit" class="login-button">
+              <span class="icon">📅</span> Agendar Consulta
+            </button>
+            
+            <div class="login-links">
+              <a href="/agendamentos.html" class="minimal-button">
+                <span class="icon">📋</span> Ver meus agendamentos
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
