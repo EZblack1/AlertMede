@@ -4,91 +4,94 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: url('/ChatGPT\ Image\ 10_04_2025\,\ 20_40_37.png') no-repeat center center fixed;
     background-size: cover;
-  }
-  
-  .login-container {
+    color: #2d3748; /* Cor de texto principal mais escura */
+}
+
+.login-container {
     min-height: 100vh;
-    backdrop-filter: brightness(0.4);
+    backdrop-filter: brightness(0.7) blur(2px); /* Mais claro com leve blur */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-  }
-  
-  .login-wrapper {
+}
+
+.login-wrapper {
     width: 100%;
     max-width: 28rem;
-  }
-  
-  .login-card {
-    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco sólido */
     border-radius: 1rem;
-    border: 1px solid #ef4444;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-    color: white;
-  }
-  
-  .login-card-content {
+    border: 1px solid #3182ce; /* Azul médico */
+    box-shadow: 0 0 20px rgba(49, 130, 206, 0.2); /* Sombra azul suave */
+    color: #2d3748; /* Texto escuro */
+}
+
+.login-card-content {
     padding: 2rem;
-  }
-  
-  .login-header {
+}
+
+.login-header {
     text-align: center;
     margin-bottom: 1.5rem;
-  }
-  
-  .login-title {
+}
+
+.login-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #ef4444;
+    color: #3182ce; /* Azul médico */
     position: relative;
-  }
-  
-  .login-title::after {
-    content: '🔐';
+    margin-bottom: 0.5rem;
+}
+
+.login-title::after {
+    content: '⚕️'; /* Símbolo médico */
     position: absolute;
     top: -10px;
     right: -25px;
     font-size: 1.2rem;
-  }
-  
-  .login-subtitle {
+}
+
+.login-subtitle {
     font-size: 0.875rem;
-    color: #f87171;
-  }
-  
-  .login-form {
+    color: #4a5568; /* Cinza azulado */
+}
+
+.login-form {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-  }
-  
-  .login-label {
-    color: #fca5a5;
-    font-weight: 500;
-  }
-  
-  .login-input {
+}
+
+.login-label {
+    color: #3182ce; /* Azul médico */
+    font-weight: 600; /* Mais negrito */
+}
+
+.login-input {
     width: 100%;
-    padding: 0.5rem;
-    background-color: #1f1f1f;
-    color: white;
-    border: 1px solid #f87171;
+    padding: 0.75rem; /* Maior padding */
+    background-color: #f7fafc; /* Fundo muito claro */
+    color: #2d3748;
+    border: 1px solid #cbd5e0; /* Borda suave */
     border-radius: 0.5rem;
-  }
-  
-  .login-input::placeholder {
-    color: #e5e5e5;
-  }
-  
-  .login-input:focus {
-    border-color: #ef4444;
-    box-shadow: 0 0 0 1px #ef4444;
+    transition: border-color 0.3s ease;
+}
+
+.login-input::placeholder {
+    color: #a0aec0; /* Placeholder mais claro */
+}
+
+.login-input:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2); /* Sombra de foco mais suave */
     outline: none;
-  }
-  
-  .login-button {
-    background-color: #dc2626;
+}
+
+.login-button {
+    background-color: #3182ce;
     color: white;
     font-weight: bold;
     padding: 0.75rem;
@@ -99,36 +102,38 @@ body {
     justify-content: center;
     gap: 0.5rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-button:hover {
-    background-color: #b91c1c;
-  }
-  
-  .login-links {
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.login-button:hover {
+    background-color: #2c5282; /* Azul mais escuro */
+    transform: translateY(-1px); /* Efeito de levitação */
+}
+
+.login-links {
     margin-top: 1.5rem;
     display: flex;
     justify-content: center;
-  }
-  
-  .minimal-button {
+}
+
+.minimal-button {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     padding: 0.4rem 0.8rem;
     font-size: 0.875rem;
-    color: #ff4c4c;
+    color: #3182ce;
     background-color: transparent;
-    border: 1px solid #ff4c4c;
+    border: 1px solid #3182ce;
     border-radius: 999px;
     transition: all 0.3s ease;
     text-decoration: none;
-  }
-  
-  .minimal-button:hover {
-    background-color: #ff4c4c;
+    font-weight: 500;
+}
+
+.minimal-button:hover {
+    background-color: #3182ce;
     color: #ffffff;
-    box-shadow: 0 2px 8px rgba(255, 76, 76, 0.2);
-  }
-  
+    box-shadow: 0 2px 8px rgba(49, 130, 206, 0.2);
+}
