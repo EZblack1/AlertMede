@@ -1,94 +1,94 @@
-/* Mantém o fundo e estrutura geral do body */
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: url('/ChatGPT\ Image\ 10_04_2025\,\ 20_40_37.png') no-repeat center center fixed;
     background-size: cover;
-  }
+}
   
-  .login-container {
+.login-container {
     min-height: 100vh;
     backdrop-filter: brightness(0.4);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-  }
+}
   
-  .login-wrapper {
+.login-wrapper {
     width: 100%;
     max-width: 30rem;
-  }
+}
   
-  .login-card {
-    background-color: rgba(0, 0, 0, 0.85);
+.login-card {
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 1rem;
-    border: 1px solid #ef4444;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-    color: white;
-  }
+    border: 1px solid #06b6d4;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+    color: #083344;
+}
   
-  .login-card-content {
+.login-card-content {
     padding: 2rem;
-  }
+}
   
-  .login-header {
+.login-header {
     text-align: center;
     margin-bottom: 1.5rem;
-  }
+}
   
-  .login-title {
+.login-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #ef4444;
+    color: #0891b2;
     position: relative;
-  }
+}
   
-  .login-title::after {
-    content: '🩺'; /* Ícone diferente para cadastro */
+.login-title::after {
+    content: '🩺'; 
     position: absolute;
     top: -10px;
     right: -25px;
     font-size: 1.2rem;
-  }
+}
   
-  .login-subtitle {
+.login-subtitle {
     font-size: 0.875rem;
-    color: #f87171;
-  }
+    color: #06b6d4;
+}
   
-  .login-form {
+.login-form {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-  }
+}
   
-  .login-label {
-    color: #fca5a5;
+.login-label {
+    color: #0e7490;
     font-weight: 500;
-  }
+}
   
-  .login-input {
+.login-input {
     width: 100%;
     padding: 0.5rem;
-    background-color: #1f1f1f;
-    color: white;
-    border: 1px solid #f87171;
+    background-color: #f0fdfa;
+    color: #164e63;
+    border: 1px solid #06b6d4;
     border-radius: 0.5rem;
-  }
+}
   
-  .login-input::placeholder {
-    color: #e5e5e5;
-  }
+.login-input::placeholder {
+    color: #5e8a9c;
+}
   
-  .login-input:focus {
-    border-color: #ef4444;
-    box-shadow: 0 0 0 1px #ef4444;
+.login-input:focus {
+    border-color: #0891b2;
+    box-shadow: 0 0 0 1px #0891b2;
     outline: none;
-  }
+}
   
-  .login-button {
-    background-color: #dc2626;
+.login-button {
+    background-color: #06b6d4;
     color: white;
     font-weight: bold;
     padding: 0.75rem;
@@ -100,47 +100,46 @@ body {
     gap: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
   
-  .login-button:hover {
-    background-color: #b91c1c;
-  }
+.login-button:hover {
+    background-color: #0891b2;
+}
   
-  .login-links {
+.login-links {
     display: flex;
     justify-content: space-between;
     margin-top: 1.5rem;
-  }
+}
   
-  .login-link {
-    color: #ef4444;
+.login-link {
+    color: #06b6d4;
     font-weight: 500;
     text-decoration: none;
     transition: color 0.3s ease;
-  }
+}
   
-  .login-link:hover {
-    color: #dc2626;
+.login-link:hover {
+    color: #0e7490;
     text-decoration: underline;
-  }
+}
   
-  .minimal-button {
+.minimal-button {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     padding: 0.4rem 0.8rem;
     font-size: 0.875rem;
-    color: #ff4c4c;
+    color: #06b6d4;
     background-color: transparent;
-    border: 1px solid #ff4c4c;
+    border: 1px solid #06b6d4;
     border-radius: 999px;
     transition: all 0.3s ease;
     text-decoration: none;
-  }
+}
   
-  .minimal-button:hover {
-    background-color: #ff4c4c;
+.minimal-button:hover {
+    background-color: #06b6d4;
     color: #ffffff;
-    box-shadow: 0 2px 8px rgba(255, 76, 76, 0.2);
-  }
-  
+    box-shadow: 0 2px 8px rgba(6, 182, 212, 0.2);
+}
