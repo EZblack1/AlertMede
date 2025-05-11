@@ -1,97 +1,98 @@
-
-
 /* Fundo com imagem relacionada à saúde */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: url('/ChatGPT\ Image\ 10_04_2025\,\ 20_40_37.png') no-repeat center center fixed;
     background-size: cover;
-  }
-  
-  
-  .login-container {
+    color: #e2e8f0; /* Texto claro para contraste */
+}
+
+.login-container {
     min-height: 100vh;
-    backdrop-filter: brightness(0.4);
+    backdrop-filter: brightness(0.4) blur(1px);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-  }
-  
-  .login-wrapper {
+}
+
+.login-wrapper {
     width: 100%;
     max-width: 28rem;
-  }
-  
-  .login-card {
-    background-color: rgba(0, 0, 0, 0.85); /* fundo preto com transparência */
+}
+
+.login-card {
+    background-color: rgba(15, 23, 42, 0.9); /* Azul escuro com transparência */
     border-radius: 1rem;
-    border: 1px solid #ef4444;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-    color: white;
-  }
-  
-  .login-card-content {
+    border: 1px solid #3b82f6; /* Azul vibrante */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    color: #e2e8f0;
+}
+
+.login-card-content {
     padding: 2rem;
-  }
-  
-  .login-header {
+}
+
+.login-header {
     text-align: center;
     margin-bottom: 1.5rem;
-  }
-  
-  .login-title {
+}
+
+.login-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #ef4444;
+    color: #60a5fa; /* Azul mais claro */
     position: relative;
-  }
-  
-  .login-title::after {
+}
+
+.login-title::after {
     content: '🔔';
     position: absolute;
     top: -10px;
     right: -25px;
     font-size: 1.2rem;
-  }
-  
-  .login-subtitle {
+    color: #3b82f6; /* Azul vibrante */
+}
+
+.login-subtitle {
     font-size: 0.875rem;
-    color: #f87171;
-  }
-  
-  .login-form {
+    color: #93c5fd; /* Azul pastel */
+}
+
+.login-form {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-  }
-  
-  .login-label {
-    color: #fca5a5;
+}
+
+.login-label {
+    color: #93c5fd; /* Azul pastel */
     font-weight: 500;
-  }
-  
-  .login-input {
+}
+
+.login-input {
     width: 100%;
-    padding: 0.5rem;
-    background-color: #1f1f1f;
-    color: white;
-    border: 1px solid #f87171;
+    padding: 0.75rem; /* Aumentado para melhor usabilidade */
+    background-color: rgba(30, 41, 59, 0.7); /* Azul mais escuro */
+    color: #f8fafc;
+    border: 1px solid #60a5fa;
     border-radius: 0.5rem;
-  }
-  
-  .login-input::placeholder {
-    color: #e5e5e5;
-  }
-  
-  .login-input:focus {
-    border-color: #ef4444;
-    box-shadow: 0 0 0 1px #ef4444;
+    transition: all 0.3s ease;
+}
+
+.login-input::placeholder {
+    color: #94a3b8; /* Cinza azulado */
+}
+
+.login-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
     outline: none;
-  }
-  
-  .login-button {
-    background-color: #dc2626;
+    background-color: rgba(30, 41, 59, 0.9);
+}
+
+.login-button {
+    background-color: #2563eb; /* Azul mais intenso */
     color: white;
     font-weight: bold;
     padding: 0.75rem;
@@ -102,46 +103,53 @@ body {
     justify-content: center;
     gap: 0.5rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-button:hover {
-    background-color: #b91c1c;
-  }
-  .login-links {
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #1d4ed8; /* Azul mais escuro */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+.login-links {
     display: flex;
     justify-content: space-between;
     margin-top: 1.5rem;
-  }
-  
-  .login-link {
-    color: #ef4444; /* vermelho claro */
+}
+
+.login-link {
+    color: #60a5fa;
     font-weight: 500;
     text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .login-link:hover {
-    color: #dc2626; /* vermelho escuro */
-    text-decoration: underline;
-  }
-  .minimal-button {
+    transition: all 0.3s ease;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.login-link:hover {
+    color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.1);
+    text-decoration: none;
+}
+
+.minimal-button {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 1rem; /* Aumentado para melhor toque */
     font-size: 0.875rem;
-    color: #ff4c4c;
+    color: #60a5fa;
     background-color: transparent;
-    border: 1px solid #ff4c4c;
+    border: 1px solid #60a5fa;
     border-radius: 999px;
     transition: all 0.3s ease;
     text-decoration: none;
-  }
-  
-  .minimal-button:hover {
-    background-color: #ff4c4c;
+}
+
+.minimal-button:hover {
+    background-color: #3b82f6;
     color: #ffffff;
-    box-shadow: 0 2px 8px rgba(255, 76, 76, 0.2);
-  }
-    
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+    transform: scale(1.05);
+}
